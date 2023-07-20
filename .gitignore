@@ -4,3 +4,4 @@ updates/
 .DS_Store
 LICENSE.TXT*
 application/files/cache/
+application/config/generated_overrides/
