@@ -17,10 +17,10 @@ $app = new Application();
 $app->detectEnvironment(
     array(
         'local' => array(
-            'hostname',
+            $_SERVER['CONCRETE5_ENV'],
         ),
         'production' => array(
-            'live.site',
+            $_SERVER['CONCRETE5_ENV'],
         ),
     ));
 

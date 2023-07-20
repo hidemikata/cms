@@ -3,3 +3,4 @@ updates/
 .htaccess
 .DS_Store
 LICENSE.TXT*
+application/files/cache/
