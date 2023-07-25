@@ -15,13 +15,13 @@ use Concrete\Core\Area\GlobalArea;
 <body>
 <?php
 
-$a = new GlobalArea('Navigation');
+$a = new GlobalArea('header global');
 $a->display();
 
 $a = new Area('Main');
 $a->display($c);
 
-$a = new GlobalArea('Navigation');
+$a = new GlobalArea('footer global');
 $a->display();
 
 ?>
