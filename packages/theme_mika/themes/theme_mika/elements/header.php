@@ -9,6 +9,21 @@ $p = new Permissions($c);
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<?php
+//デフォルトで読み込み（style.css）
+?>
+<link href="<?=$view->getThemePath()?>/css/style.css" rel="stylesheet">
+<?php
+//テーマのハンドル名でファイルがあれば読み込み
+$template_handle_name = $c->getPageTemplateHandle();
+$css_full_path = DIR_BASE . $view->getThemePath(). '/css/' .$template_handle_name.'.css';
+if (file_exists($css_full_path)){
+  ?>
+  <link href="<?=$view->getThemePath()?>/css/<?=$template_handle_name?>.css" rel="stylesheet">
+  <?php
+}
+?>
+
     <?php
     View::element('header_required', [
         'pageTitle' => isset($pageTitle) ? $pageTitle : '',

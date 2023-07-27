@@ -5,7 +5,7 @@ $view->inc('elements/header.php');
 
 //container for grid
 ?>
-<div class="container">
+<div class="container top-body">
 <div class="row">
 <div class="col-2">
 <?php
@@ -18,7 +18,7 @@ $a->display($c);
 $a = new Area('right');
 $a->display($c);
 ?>
-    </div>
+</div>
 </div>
 <?php
 
