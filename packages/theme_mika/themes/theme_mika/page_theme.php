@@ -17,6 +17,12 @@ class PageTheme extends Theme
     {
         return t('description');
     }
+
+    public function registerAssets()
+    {
+        $this->requireAsset('jquery');
+    }
+
 }
 
 
