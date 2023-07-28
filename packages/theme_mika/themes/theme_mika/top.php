@@ -7,13 +7,13 @@ $view->inc('elements/header.php');
 ?>
 <div class="container top-body">
 <div class="row">
-<div class="col-2">
+<div class="col-sm-3">
 <?php
 $a = new Area('left');
 $a->display($c);
 ?>
 </div>
-<div class="col-10">
+<div class="col-sm-9">
 <?php
 $a = new Area('right');
 $a->display($c);
