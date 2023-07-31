@@ -5,7 +5,7 @@ $view->inc('elements/header.php');
 
 //container for grid
 ?>
-<div class="container top-body">
+<div class="container top-content-body">
 <div class="row">
 <div class="col-sm">
 <?php
