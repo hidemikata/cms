@@ -5,3 +5,11 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.pager-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#9ec5fe;
+    border-radius: 10px;
+}
+
