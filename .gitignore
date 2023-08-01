@@ -7,3 +7,4 @@ application/files/cache/
 application/config/generated_overrides/
 application/files/tmp/
 application/files/*
+*.map
