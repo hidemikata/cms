@@ -10,12 +10,7 @@ $view->inc('elements/header.php');
 
 
 <div class="row">
-
-<div class="col-sm-3 top-content-left">
-contents
-
-</div>
-<div class="col-sm-9 top-content-main">
+<div class="col-sm top-content-main">
 <?php
 $a = new Area('blog');
 $a->display($c);
