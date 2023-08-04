@@ -12,6 +12,9 @@ $c = Page::getCurrentPage();
   <?php foreach ($pages as $page) {
     $img = $page->getAttribute('thumbnail');
     $thumb = $ih->getThumbnail($img, 208, 153, true);
+    if ($thumb->src==''){
+        $thumb->src = '/application/files/9916/9112/6253/imo.png';
+    }
   ?>
     <div class="col-sm-4">
       <div class="card shadow-sm">
@@ -21,7 +24,7 @@ $c = Page::getCurrentPage();
         <div class="card-body">
           <p class="card-text top-list-body-text">
             <a href="<?= $page->getCollectionLink() ?>"><?= $page->getCollectionName() ?>
-              <?php $page->getCollectionDescription(); ?>
+              <?= $page->getCollectionDescription(); ?>
             </a>
           </p>
           <div class="d-flex justify-content-between align-items-center">
