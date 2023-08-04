@@ -1,4 +1,5 @@
 <?php
+
 namespace Concrete\Package\ThemeMika\Theme\ThemeMika;
 
 use Concrete\Core\Page\Theme\Theme;
@@ -22,7 +23,4 @@ class PageTheme extends Theme
     {
         $this->requireAsset('jquery');
     }
-
 }
-
-

@@ -9,14 +9,14 @@ $view->inc('elements/header.php');
 
 
 
-<div class="row">
-<div class="col-sm top-content-main">
-<?php
-$a = new Area('blog');
-$a->display($c);
-?>
-</div>
-</div>
+    <div class="row">
+        <div class="col-sm top-content-main">
+            <?php
+            $a = new Area('blog');
+            $a->display($c);
+            ?>
+        </div>
+    </div>
 </div>
 <?php
 $view->inc('elements/footer.php');
