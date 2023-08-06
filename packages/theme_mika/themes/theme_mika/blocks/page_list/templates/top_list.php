@@ -22,7 +22,7 @@ $c = Page::getCurrentPage();
           <a href="<?= $page->getCollectionLink() ?>"><img class="top-thumnail-img" src="<?php echo $thumb->src ?>" /></a>
         </div>
         <div class="card-body">
-          <strong class="d-inline-block mb-2 text-success">Design</strong>
+          <strong class="d-inline-block mb-2 text-primary">Design</strong>
           <p class="card-text top-list-body-text">
             <a class="top-content-title-name" href="<?= $page->getCollectionLink() ?>"><?= $page->getCollectionName() ?>
               <?= $page->getCollectionDescription(); ?>
