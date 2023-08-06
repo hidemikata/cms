@@ -13,21 +13,4 @@
   text-decoration: none;
   text-decoration-color: black;
   color: black;
-}
-
-.top-content-item {
-  min-height: 100px;
-}
-
-.top-body {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.pager-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #9ec5fe;
-  border-radius: 10px;
-}/*# sourceMappingURL=top.css.map */
+}/*# sourceMappingURL=blog_card.css.map */
