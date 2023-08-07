@@ -10,10 +10,14 @@ $c = Page::getCurrentPage();
   <?php //トータルページが欲しい時はPagelistのignorePermissionをやって、list->getTotalResults()で取れる。
   ?>
   <?php foreach ($pages as $page) {
+    $topic = $page->getAttribute('topic_handle', 'display');
+    if (is_null($topic)) {
+      $topic = '';
+    }
     $img = $page->getAttribute('thumbnail');
     $thumb = $ih->getThumbnail($img, 208, 153, true);
-    if ($thumb->src==''){
-        $thumb->src = '/application/files/9916/9112/6253/imo.png';
+    if ($thumb->src == '') {
+      $thumb->src = '/application/files/9916/9112/6253/imo.png';
     }
   ?>
     <div class="col-sm-4">
@@ -22,7 +26,7 @@ $c = Page::getCurrentPage();
           <a href="<?= $page->getCollectionLink() ?>"><img class="top-thumnail-img" src="<?php echo $thumb->src ?>" /></a>
         </div>
         <div class="card-body">
-          <strong class="d-inline-block mb-2 text-primary">Design</strong>
+          <strong class="d-inline-block mb-2 text-primary"><?= $topic ?></strong>
           <p class="card-text top-list-body-text">
             <a class="top-content-title-name" href="<?= $page->getCollectionLink() ?>"><?= $page->getCollectionName() ?>
               <?= $page->getCollectionDescription(); ?>
