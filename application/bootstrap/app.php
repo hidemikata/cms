@@ -66,3 +66,8 @@
  *
  * ----------------------------------------------------------------------------
  */
+
+ $_SERVER['HTTPS'] = 'on';
+$request = Request::getInstance();
+$request->server->set('HTTPS', 'on');
+
