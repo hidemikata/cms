@@ -11,3 +11,5 @@ git pull origin main
 docker cp ./dump_file mysql_cont:/  
 docker exec -it mysql_cont /bin/bash  
 mysql -uroot -p cms < dump_file  
+
+
