@@ -2,6 +2,8 @@
 
 namespace MikaSrc\MikaLogger;
 
+defined('C5_EXECUTE') or die('Access Denied.');
+
 use Monolog\Logger;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Formatter\LineFormatter;
