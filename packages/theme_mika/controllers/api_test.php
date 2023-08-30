@@ -13,4 +13,10 @@ class ApiTest extends Controller
         var_dump('test');
         $this->set('foo', $param1);
     }
+
+    public function test2($param2)
+    {
+        var_dump('test');
+        $this->set('foo', $param2);
+    }
 }
