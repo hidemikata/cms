@@ -16,3 +16,6 @@ if (!class_exists(\DoctrineXml\Checker::class)) {
         die(1);
     }
 }
+$classLoader = new \Symfony\Component\ClassLoader\Psr4ClassLoader();
+$classLoader->addPrefix('Application\\TestClass', DIR_APPLICATION . '/' . DIRNAME_CLASSES . '/TestClass');
+$classLoader->register();

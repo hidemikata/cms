@@ -80,3 +80,7 @@ $router->get('/api/current_user', function () {
 Route::register('/test', function () {
     print 'This is a contrived example.';
 });
+
+
+$test = new Application\TestClass\TestClass();
+//var_dump($test->test_func());
