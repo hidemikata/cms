@@ -7,6 +7,7 @@ defined('C5_EXECUTE') or die('Access Denied.');
 use \Concrete\Core\Package\Package;
 use Concrete\Core\Page\Theme\Theme;
 use MikaSrc\MikaLogger\MikaServiceProvider;
+use Route;
 
 
 class Controller extends Package
@@ -43,5 +44,8 @@ class Controller extends Package
     {
         $provider_list = $this->app->make('Concrete\Core\Foundation\Service\ProviderList');
         $provider_list->registerProvider(MikaServiceProvider::class);
+
+        //ルーティング
+        Route::register('/test_routing/test/{param1}', 'Concrete\Package\ThemeMika\Controller\ApiTest::test');
     }
 }

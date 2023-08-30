@@ -71,3 +71,12 @@ if ($app->environment() == 'production') {
     $request = Request::getInstance();
     $request->server->set('HTTPS', 'on');
 }
+
+
+$router = $app->make('router');
+$router->get('/api/current_user', function () {
+    return 'Return a simple string.';
+});
+Route::register('/test', function () {
+    print 'This is a contrived example.';
+});
