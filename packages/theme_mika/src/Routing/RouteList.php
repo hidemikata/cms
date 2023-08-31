@@ -12,12 +12,10 @@ class RouteList implements RouteListInterface
             ->setPrefix('/api')
             ->setNamespace('Concrete\Package\ThemeMika\Controller')
             ->routes('test.php', 'theme_mika');
-        /*
-        その２
+
         $router->buildGroup()
-        ->setPrefix('/api')
-        ->setNamespace('Concrete\Package\ThemeMika\Controller')
-        ->routes('test.php', 'theme_mika');
-        */
+            ->setPrefix('/api')
+            ->setNamespace('Concrete\Package\ThemeMika\Controller')
+            ->routes('check_request.php', 'theme_mika');
     }
 }
