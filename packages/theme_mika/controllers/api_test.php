@@ -59,5 +59,7 @@ class ApiTest extends Controller
         //パッケージに作って読み取る場合
         $packageObject = Package::getByHandle('theme_mika');
         var_dump($packageObject->getFileConfig()->get('app'));
+
+        var_dump(HOME_URL);
     }
 }

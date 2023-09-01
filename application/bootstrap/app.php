@@ -67,20 +67,29 @@
  * ----------------------------------------------------------------------------
  */
 if ($app->environment() == 'production') {
-    $_SERVER['HTTPS'] = 'on';
-    $request = Request::getInstance();
-    $request->server->set('HTTPS', 'on');
+  $_SERVER['HTTPS'] = 'on';
+  $request = Request::getInstance();
+  $request->server->set('HTTPS', 'on');
 }
 
 
 $router = $app->make('router');
 $router->get('/api/current_user', function () {
-    return 'Return a simple string.';
+  return 'Return a simple string.';
 });
 Route::register('/test', function () {
-    print 'This is a contrived example.';
+  print 'This is a contrived example.';
 });
 
 
 $test = new Application\TestClass\TestClass();
 //var_dump($test->test_func());
+
+switch ($_SERVER['CONCRETE5_ENV']) {
+  case 'local':
+    define('HOME_URL', 'http://localhost');
+    break;
+  case 'production':
+    define('HOME_URL', 'https://mikamikaclub-blog.com');
+    break;
+}
