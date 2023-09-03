@@ -5,7 +5,7 @@
     <br>
     ローカル画像
     <br>
-    <img src="/application/files/6116/9371/7780/IMG_0432.JPG" width="100" height="100">
+    <img src="/cms/test.jpg" width="100" height="100">
 
     <br>
     cloudfront画像
