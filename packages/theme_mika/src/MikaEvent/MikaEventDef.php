@@ -4,10 +4,7 @@ namespace MikaSrc\MikaEvent;
 
 defined('C5_EXECUTE') or die('Access Denied.');
 
-use Concrete\Core\Foundation\Service\Provider as ServiceProvider;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Contracts\EventDispatcher\Event;
-use Concrete\Core\Support\Facade\Events;
 
 
 class MikaEventDef extends Event
