@@ -16,7 +16,7 @@ class MikaEventSubscriber implements EventSubscriberInterface //インタフェ�
                 ['test_subscriber_func1', 10], //ここに書いたものが順次実行
                 ['test_subscriber_func2', 11], //値が大きい方から順に実行される
             ]
-            //さらにここにEvent定期クラスとこのクラスにfunctionかけば、別のEventクラスも引っ張ってこれる。
+            //さらにここに別のEvent定義クラスとこのクラスにfunctionかけば、別のEventクラスも引っ張ってこれる。
         ];
     }
     public function test_subscriber_func1(MikaEventDef $event)
