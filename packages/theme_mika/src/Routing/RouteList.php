@@ -17,5 +17,10 @@ class RouteList implements RouteListInterface
             ->setPrefix('/api')
             ->setNamespace('Concrete\Package\ThemeMika\Controller')
             ->routes('check_request.php', 'theme_mika');
+
+        $router->buildGroup()
+            ->setPrefix('/api')
+            ->setNamespace('Concrete\Package\ThemeMika\Controller')
+            ->routes('event.php', 'theme_mika');
     }
 }
