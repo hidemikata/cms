@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<concrete5-cif version="1.0">
+  <blocktypes>
+    <blocktype handle="basic_test" package="theme_mika"/>
+  </blocktypes>
+  <blocktypesets>
+    <blocktypeset handle="mika_block" name="MikaBlock" package="theme_mika">
+    <blocktype handle="basic_test"/>
+    </blocktypeset>
+  </blocktypesets>
+
+</concrete5-cif>

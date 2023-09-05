@@ -16,7 +16,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'theme_mika';
     protected $appVersionRequired = '8.5.1';
-    protected $pkgVersion = '0.1';
+    protected $pkgVersion = '0.11';
 
 
     protected $pkgAutoloaderRegistries = ['src' => 'MikaSrc'];
@@ -35,12 +35,15 @@ class Controller extends Package
     {
         $pkg = parent::install();
         $this->installContentFile('install/theme.xml');
+        $this->installContentFile('config/blocktypes.xml');
+        //parentはこっちじゃなくていいのか？
     }
 
     public function upgrade()
     {
-        parent::upgrade();
         $this->installContentFile('install/theme.xml');
+        $this->installContentFile('config/blocktypes.xml');
+        parent::upgrade();
     }
     public function on_start()
     {
