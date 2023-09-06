@@ -27,5 +27,11 @@ class RouteList implements RouteListInterface
             ->setPrefix('/block_api')
             ->setNamespace('Concrete\Package\ThemeMika\Block\BasicTest')
             ->routes('in_block.php', 'theme_mika');
+
+
+        $router->buildGroup()
+            ->setPrefix('/api')
+            ->setNamespace('Concrete\Package\ThemeMika\Controller')
+            ->routes('cache_test.php', 'theme_mika');
     }
 }
