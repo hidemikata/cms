@@ -38,9 +38,6 @@ class ApiTest extends Controller
         $c = $app->make('config');
         var_dump($c->get('app.test_key'));
 
-
-
-
         $this->logger->debug('test');
         var_dump('test');
         $this->set('foo', $param);

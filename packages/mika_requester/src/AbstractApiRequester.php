@@ -3,20 +3,27 @@
 namespace MikaRequester;
 
 use Symfony\Component\HttpClient\HttpClient;
+use Concrete\Core\Application\ApplicationAwareInterface;
+use Concrete\Core\Application\ApplicationAwareTrait;
+use Concrete\Core\Application\Application;
 
-abstract class AbstractApiRequester
+abstract class AbstractApiRequester implements ApplicationAwareInterface
 {
+    use ApplicationAwareTrait;
+
     private $site;
     private $client;
     private $headers;
     private $body;
 
-    public function __construct()
+
+    public function __construct(Application $app)
     {
         $packageObject = \Package::getByHandle('mika_requester');
         $this->site = $packageObject->getFileConfig()->get('app.url');
 
         $this->client = HttpClient::create();
+        $app->make('config');
     }
     public function setHeader($key, $value)
     {

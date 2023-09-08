@@ -34,7 +34,7 @@ class RequestTest extends Controller
             var_dump('error' . $res->getStatusCode());
             exit;
         }
-        var_dump($res);
-        var_dump($res->getData());
+        //var_dump($res);
+        //var_dump($res->getData());
     }
 }
