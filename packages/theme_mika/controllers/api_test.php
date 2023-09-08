@@ -24,11 +24,26 @@ class ApiTest extends Controller
         $this->config = $config;
     }
 
-    public function test($param1)
+    public function test($param)
     {
+        //appの取り方全部一緒
+        $app = $this->app;
+        $c = $app->make('config');
+        var_dump($c->get('app.test_key'));
+        $app = app();
+        $c = $app->make('config');
+        var_dump($c->get('app.test_key'));
+
+        $app = \Concrete\Core\Support\Facade\Facade::getFacadeApplication();
+        $c = $app->make('config');
+        var_dump($c->get('app.test_key'));
+
+
+
+
         $this->logger->debug('test');
         var_dump('test');
-        $this->set('foo', $param1);
+        $this->set('foo', $param);
     }
 
     public function test2($param2)
