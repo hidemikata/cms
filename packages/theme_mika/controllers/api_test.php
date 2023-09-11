@@ -45,6 +45,11 @@ class ApiTest extends Controller
 
     public function test2($param2)
     {
+        //脆弱性テスト
+        var_dump($param2);
+?>
+        <a href="<?= $param2 ?>" link</a>
+    <?php
         $this->logger->debug($param2);
 
         var_dump('test');
