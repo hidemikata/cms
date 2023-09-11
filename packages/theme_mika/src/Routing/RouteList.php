@@ -3,6 +3,7 @@
 namespace MikaSrc\Routing;
 
 use Concrete\Core\Routing\RouteListInterface;
+use MikaSrc\Http\Middleware\MySampleMiddleware;
 
 class RouteList implements RouteListInterface
 {
@@ -37,5 +38,11 @@ class RouteList implements RouteListInterface
             ->setPrefix('/api')
             ->setNamespace('Concrete\Package\ThemeMika\Controller')
             ->routes('request_test.php', 'theme_mika');
+
+        $router->buildGroup()
+            ->setPrefix('/api')
+            ->setNamespace('Concrete\Package\ThemeMika\Controller')
+            ->addMiddleware(MySampleMiddleware::class)
+            ->routes('middleware_test.php', 'theme_mika');
     }
 }
