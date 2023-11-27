@@ -15,8 +15,7 @@
                     var selection = editor.getSelection();
                     var selectedText = selection.getSelectedText();
                     // プラグインが実行される際の処理をここに追加します
-                    editor.insertHtml('<pre>' + selectedText + '</pre>');
-                    editor.insertHtml('<code>' + selectedText + '</code>');
+                    editor.insertHtml('<pre><code>' + selectedText + '</code></pre>');
 
                 }
             });
