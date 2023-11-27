@@ -9,8 +9,8 @@ use Concrete\Core\Page\Theme\Theme;
 use MikaSrc\MikaLogger\MikaServiceProvider;
 use MikaSrc\Routing\RouteServiceProvider;
 use MikaSrc\MikaEvent\MikaEventServiceProvider;
+use MikaSrc\MikaEditor\MikaEditorServiceProvider;
 use Route;
-
 
 class Controller extends Package
 {
@@ -51,6 +51,7 @@ class Controller extends Package
         $provider_list->registerProvider(MikaServiceProvider::class);
         $provider_list->registerProvider(RouteServiceProvider::class);
         $provider_list->registerProvider(MikaEventServiceProvider::class);
+        $provider_list->registerProvider(MikaEditorServiceProvider::class);
 
         //ルーティング
         Route::register('/test_routing/test/{param1}', 'Concrete\Package\ThemeMika\Controller\ApiTest::test');
